@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holding Tayebi</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/scroll.css" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
@@ -21,6 +22,35 @@
       .glass-effect {
         backdrop-filter: blur(5px);
         background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* انیمیشن برای متن‌های هدر */
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slide-down {
+        animation: slideDown 1.5s ease forwards;
+        opacity: 0;
+      }
+
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+
+      .delay-300 {
+        animation-delay: 0.3s;
       }
     </style>
   </head>
@@ -66,14 +96,18 @@
         class="relative z-10 flex flex-col items-center justify-center h-3/4 text-center px-4"
       >
         <h1
-          class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+          class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-slide-down"
         >
           به <span class="text-blue-400">هلدینگ طیبی</span> خوش آمدید
         </h1>
-        <p class="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
+        <p
+          class="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed animate-slide-down delay-100"
+        >
           ارائه دهنده خدمات برتر در صنعت با بیش از ۱۵ سال تجربه درخشان
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <div
+          class="flex flex-col sm:flex-row gap-4 mt-2 animate-slide-down delay-200"
+        >
           <button
             class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
           >
@@ -86,7 +120,9 @@
           </button>
         </div>
         <!-- Scroll down indicator (with ai) -->
-        <div class="absolute bottom-10 animate-bounce">
+        <div
+          class="absolute bottom-10 animate-bounce animate-slide-down delay-300"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-10 w-10 text-white opacity-70"
