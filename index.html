@@ -1,13 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Holding Tayebi</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style in head when i cant use tailwind -->
+    <style>
+      body {
+        font-family: "Vazirmatn", sans-serif;
+      }
+      header {
+        background-image: url(/images/header-img/header-img.jpg);
+      }
+      .glass-effect {
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
   </head>
-  <body>
-    <h1 class="text-3xl text-red-500">hello</h1>
+  <body class="bg-gray-50">
+    <!-- Header with background image -->
+    <header class="relative h-screen bg-cover bg-center">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40"
+      ></div>
+      <!-- Navigation and buttons -->
+      <nav
+        class="relative z-10 flex justify-between items-center p-6 lg:px-16 py-8"
+      >
+        <div class="text-white text-3xl font-bold tracking-wider">
+          <span class="text-blue-400">هلدینگ</span> طیبی
+        </div>
+
+        <div class="hidden md:flex space-x-2 space-x-reverse">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+          >
+            خانه
+          </button>
+          <button
+            class="glass-effect hover:bg-white/20 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 hover:border-white/60"
+          >
+            درباره ما
+          </button>
+          <button
+            class="glass-effect hover:bg-white/20 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 hover:border-white/60"
+          >
+            خدمات
+          </button>
+          <button
+            class="glass-effect hover:bg-white/20 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 hover:border-white/60 mr-2"
+          >
+            تماس با ما
+          </button>
+        </div>
+      </nav>
+      <!-- Header content -->
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-3/4 text-center px-4"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+        >
+          به <span class="text-blue-400">هلدینگ طیبی</span> خوش آمدید
+        </h1>
+        <p class="text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
+          ارائه دهنده خدمات برتر در صنعت با بیش از ۱۵ سال تجربه درخشان
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+          >
+            شروع کنید
+          </button>
+          <button
+            class="glass-effect text-white font-bold py-3.5 px-8 rounded-lg text-lg transition-all duration-300 border border-white/30 hover:border-white/60 hover:bg-white/10"
+          >
+            تماس با ما
+          </button>
+        </div>
+        <!-- Scroll down indicator (with ai) -->
+        <div class="absolute bottom-10 animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10 text-white opacity-70"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div class="h-72 w-full bg-amber-800"></div>
   </body>
 </html>
 <script type="module" src="index.ts"></script>
