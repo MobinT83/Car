@@ -1,5 +1,7 @@
 # Holding
 
+I wrote the code for this project using the knowledge I had, but in some parts, I used AI to improve the design and fix bugs.
+
 To install dependencies:
 
 ```bash
