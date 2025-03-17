@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holding Tayebi</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style/scroll.css" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
@@ -23,8 +22,7 @@
         backdrop-filter: blur(5px);
         background-color: rgba(255, 255, 255, 0.1);
       }
-
-      /* انیمیشن برای متن‌های هدر */
+      /* animation of header text */
       @keyframes slideDown {
         0% {
           opacity: 0;
@@ -35,20 +33,16 @@
           transform: translateY(0);
         }
       }
-
       .animate-slide-down {
         animation: slideDown 1.5s ease forwards;
         opacity: 0;
       }
-
       .delay-100 {
         animation-delay: 0.1s;
       }
-
       .delay-200 {
         animation-delay: 0.2s;
       }
-
       .delay-300 {
         animation-delay: 0.3s;
       }
@@ -67,7 +61,6 @@
         <div class="text-white text-3xl font-bold tracking-wider">
           <span class="text-blue-400">هلدینگ</span> طیبی
         </div>
-
         <div class="hidden md:flex space-x-2 space-x-reverse">
           <button
             class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50"
